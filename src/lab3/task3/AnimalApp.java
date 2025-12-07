@@ -1,18 +1,6 @@
 package lab3.task3;
 
-/*
- * Lab 3 - Task 3: Animal Classification System
- * --------------------------------------------
- * Goal: Practice advanced inheritance concepts using an abstract base class (Animal)
- *       and multiple interfaces (Flyable, Swimmable). Show multiple interface
- *       implementation (Duck implements both) and interface-based polymorphism.
- *
- * What you will learn:
- * - How abstract classes define shared state/behavior and abstract methods.
- * - How interfaces declare capabilities that can be mixed into different classes.
- * - How a class can implement multiple interfaces in Java.
- * - How to use polymorphism via base classes and interfaces.
- */
+import java.util.*;
 
 // ------------------------- Abstract base class -------------------------
 abstract class Animal {
@@ -26,6 +14,7 @@ abstract class Animal {
         this.species = species;
         this.age = age;
     }
+   
 
     // Concrete method shared by all animals
     public void displayInfo() {
@@ -48,7 +37,6 @@ interface Swimmable {
     void swim();
 }
 
-// ------------------------- Concrete animal classes -------------------------
 class Bird extends Animal implements Flyable {
     public Bird(String name, int age) {
         super(name, "Bird", age);

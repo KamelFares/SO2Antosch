@@ -158,6 +158,12 @@ class StudentRegistry {
 class StudentDataManager {
     private static final String CSV_HEADER = "MatriculationNumber,FirstName,LastName,BirthYear";
 
+    /*
+    public void saveToCsv(list<student> students, string filename ) throws datapersistenceexception {
+        // implementation
+    }
+        try (print)
+    */
     // Save as CSV using try-with-resources
     public void saveToCsv(List<Student> students, String filename) throws DataPersistenceException {
         try (PrintWriter out = new PrintWriter(new OutputStreamWriter(new FileOutputStream(filename), StandardCharsets.UTF_8))) {
